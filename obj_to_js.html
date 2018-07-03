@@ -30,8 +30,8 @@
 		<a href="http://threejs.org" target="_blank" rel="noopener">three.js</a> - OBJLoader test
 		</div>
 
-		<script src="../../build/three.js"></script>
-		<script src="../js/loaders/OBJLoader.js"></script>
+		<script src="three.js"></script>
+		<script src="OBJLoader.js"></script>
 
 		<script>
 			var container;
@@ -70,7 +70,7 @@
 				var onError = function ( xhr ) {
 				};
 				var loader = new THREE.OBJLoader( manager );
-				loader.load( 'signal_left/tinker.obj', function ( object ) {
+				loader.load( 'tinker.obj', function ( object ) {
 					object.traverse( function ( child ) {
 						if ( child instanceof THREE.Mesh ) {
 							child.material.map = texture;

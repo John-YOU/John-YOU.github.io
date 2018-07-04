@@ -65,6 +65,7 @@
 				  var objLoader = new THREE.OBJLoader();
 				  objLoader.setMaterials(materials);
 				  objLoader.load('tinker.obj', function(object) {
+				    console.log(object);
 				    scene.add(object);
 				  });
 				})

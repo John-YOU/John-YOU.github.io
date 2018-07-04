@@ -824,7 +824,7 @@ v 24.721 		76.085 		1
 
 g group_0_16311991
 
-usemtl red
+usemtl color_16311991
 s 0
 
 f 10 	132 	9
@@ -1940,7 +1940,7 @@ f 155 	803 	151
 
 g group_0_16448250
 
-usemtl blue
+usemtl color_16448250
 s 0
 
 f 1 	2 	3

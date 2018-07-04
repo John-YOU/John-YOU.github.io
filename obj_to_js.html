@@ -58,22 +58,10 @@
 				manager.onProgress = function ( item, loaded, total ) {
 					console.log( item, loaded, total );
 				};
-				var textureLoader = new THREE.TextureLoader( manager );
-				var texture = textureLoader.load( 'UV_Grid_Sm.jpg' );
-				// model
-				var onProgress = function ( xhr ) {
-					if ( xhr.lengthComputable ) {
-						var percentComplete = xhr.loaded / xhr.total * 100;
-						console.log( Math.round(percentComplete, 2) + '% downloaded' );
-					}
-				};
-				var onError = function ( xhr ) {
-				};
 				var loader = new THREE.OBJLoader( manager );
 				loader.load( 'tinker.obj', function ( object ) {
-					object.position.y = - 95;
 					scene.add( object );
-				}, onProgress, onError );
+				});
 				//
 				renderer = new THREE.WebGLRenderer();
 				renderer.setPixelRatio( window.devicePixelRatio );

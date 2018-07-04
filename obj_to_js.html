@@ -66,6 +66,17 @@
 				  objLoader.setMaterials(materials);
 				  objLoader.load('tinker.obj', function(object) {
 				    console.log(object);
+				    const meshA = object.children[0];
+				    const meshB = object.children[1];
+				    const m = meshA.geometry.attributes.position.count;
+				    const n = meshB.geometry.attributes.position.count;
+				    for (let i = 0; i < m; ++i){
+				    	meshA.geometry.attributes.position.array[i*3+2]=0;
+				    }
+				    for (let i = 0; i < n; ++i){
+				    	meshB.geometry.attributes.position.array[i*3+2]=0;
+				    }
+				    console.log(1,object);
 				    scene.add(object);
 				  });
 				})

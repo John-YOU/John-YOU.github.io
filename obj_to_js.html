@@ -65,7 +65,6 @@
 				  var objLoader = new THREE.OBJLoader();
 				  objLoader.setMaterials(materials);
 				  objLoader.load('tinker.obj', function(object) {
-				    object.position.y = -95;
 				    scene.add(object);
 				  });
 				})
